@@ -1,0 +1,99 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#indexBox1 {
+	background-color: red;
+}
+
+#indexBox2 {
+	background-color: orange;
+}
+
+#indexBox3 {
+	background-color: yellow;
+}
+
+#indexBox4 {
+	background-color: green;
+}
+
+#indexBox5 {
+	background-color: blue;
+}
+
+#indexBox6 {
+	background-color: indigo;
+}
+
+#indexBox7 {
+	background-color: white;
+}
+
+#indexBox8 {
+	background-color: lightgrey;
+}
+
+#indexBox9 {
+	background-color: grey;
+}
+
+#indexBox10 {
+	background-color: black;
+}
+
+.col-xs-2 {
+	display: inline-block;
+	height: 10em;
+	width: 10em;
+}
+
+#indexBox1:hover, #indexBox2:hover, #indexBox3:hover, #indexBox4:hover, #indexBox5:hover, #indexBox6:hover, 
+#indexBox7:hover, #indexBox8:hover, #indexBox9:hover,
+#indexBox10:hover{
+	background-color: rgba(0, 0, 0, .5);
+	-webkit-transition: all 500ms ease;
+	-webkit-animation: breathing 5s ease-out infinite normal;
+	-moz-transition: all 500ms ease;
+	-moz-animation: breathing 5s ease-out infinite normal;
+	-ms-transition: all 500ms ease;
+	-ms-animation: breathing 5s ease-out infinite normal;
+	-o-transition: all 500ms ease;
+	-o-animation: breathing 5s ease-out infinite normal;
+	transition: all 500ms ease;
+	transition: breathing 5s ease-out infinite normal;
+}
+
+@-webkit-keyframes breathing {
+  0% {
+    -webkit-transform: scale(-1);
+    transform: scale(-1.5);
+  }
+  25% {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+  50% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  75% {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+
+.container {
+	padding-top: 5%;
+	padding-left: 20%;
+	padding-right: 12.5%;
+}
+
+body {
+	background-color: violet;
+}

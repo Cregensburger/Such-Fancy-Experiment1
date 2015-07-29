@@ -1,99 +1,113 @@
-// Place all the styles related to the welcome controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/*Place all the styles related to the welcome controller here.*/
+/*They will automatically be included in application.css.*/
+/*You can use Sass (SCSS) here: http://sass-lang.com/*/
 
-#indexBox1 {
-	background-color: red;
-}
-
-#indexBox2 {
-	background-color: orange;
-}
-
-#indexBox3 {
-	background-color: yellow;
-}
-
-#indexBox4 {
-	background-color: green;
-}
-
-#indexBox5 {
-	background-color: blue;
-}
-
-#indexBox6 {
-	background-color: indigo;
-}
-
-#indexBox7 {
-	background-color: white;
-}
-
-#indexBox8 {
-	background-color: lightgrey;
-}
-
-#indexBox9 {
-	background-color: grey;
-}
-
-#indexBox10 {
-	background-color: black;
-}
-
+/*Overarching styling for all boxes*/
 .col-xs-2 {
 	display: inline-block;
 	height: 10em;
-	width: 10em;
+	width: calc(100% - 82%);
 }
 
-#indexBox1:hover, #indexBox2:hover, #indexBox3:hover, #indexBox4:hover, #indexBox5:hover, #indexBox6:hover, 
-#indexBox7:hover, #indexBox8:hover, #indexBox9:hover,
-#indexBox10:hover{
-	background-color: rgba(0, 0, 0, .5);
-	-webkit-transition: all 500ms ease;
-	-webkit-animation: breathing 5s ease-out infinite normal;
-	-moz-transition: all 500ms ease;
-	-moz-animation: breathing 5s ease-out infinite normal;
-	-ms-transition: all 500ms ease;
-	-ms-animation: breathing 5s ease-out infinite normal;
-	-o-transition: all 500ms ease;
-	-o-animation: breathing 5s ease-out infinite normal;
-	transition: all 500ms ease;
-	transition: breathing 5s ease-out infinite normal;
-}
-
-@-webkit-keyframes breathing {
-  0% {
-    -webkit-transform: scale(-1);
-    transform: scale(-1.5);
-  }
-  25% {
-    -webkit-transform: scale(1.5);
-    transform: scale(1.5);
-  }
-  50% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-  75% {
-    -webkit-transform: scale(1.5);
-    transform: scale(1.5);
-  }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
-
-
+/*Outer-sizing for box container*/
 .container {
-	padding-top: 5%;
-	padding-left: 20%;
-	padding-right: 12.5%;
+	padding: calc(100% - 95%);
+	padding-left: 10%;
+	/* How pronounced should the 3D effects be for box2 */
+		perspective: 800px;
+		-webkit-perspective: 800px;
+		-moz-perspective: 800px;
+		-o-perspective: 800px;
 }
 
+	/*Box styling and animation(s)*/
+	.col-xs-2:nth-child(odd){
+		border-radius: 50%;
+	}
+
+	.col-xs-2:nth-child(even){
+
+	}
+
+		/*Box 1 special styling, make it ease in and out orange*/
+		.col-xs-2:nth-child(1) {
+			background-color: red;
+			-moz-transition: all .5s ease-out;
+		    -o-transition: all .5s ease-out;
+		    -webkit-transition: all .5s ease-out;
+		    transition: all .5s ease-out;
+		}
+
+		.col-xs-2:nth-child(1):hover {
+			background-color: orange;
+			-moz-transition: all .5s ease-in;
+		    -o-transition: all .5s ease-in;
+		    -webkit-transition: all .5s ease-in;
+		    transition: all .5s ease-in;
+		}
+
+		/*Box 2 special styling, have it flip over to reveal new color*/
+		.col-xs-2:nth-child(2) {
+			background-color: orange;
+			transition: all 1s ease-out;
+		}
+		.col-xs-2:nth-child(2):hover {
+			background-color: purple;
+			border-radius: 5em;
+			/* When the container is hovered, flip the front side and hide it .. */
+			transform:rotateY(180deg);
+			-webkit-transform:rotateY(180deg);
+
+			/* Animate the transitions */
+				transition:all 1s ease-in;
+		}
+
+
+		#indexBox2Back:hover{
+			background-color: purple;
+height: 10em;
+			width: calc(100% - 82%);
+			/* .. at the same time flip the back side into visibility */
+			transform:rotateY(360deg);
+			-webkit-transform:rotateY(360deg);
+		}
+
+		.col-xs-2:nth-child(3) {
+			background-color: yellow;
+		}
+
+		.col-xs-2:nth-child(4) {
+			background-color: green;
+		}
+
+		.col-xs-2:nth-child(5) {
+			background-color: blue;
+		}
+
+		.col-xs-2:nth-child(6) {
+			background-color: indigo;
+		}
+
+		.col-xs-2:nth-child(7) {
+			background-color: white;
+		}
+
+		.col-xs-2:nth-child(8) {
+			background-color: lightgrey;
+		}
+
+		.col-xs-2:nth-child(9) {
+			background-color: grey;
+		}
+
+		.col-xs-2:nth-child(10) {
+			background-color: black;
+		}
+
+
+
+/*background styling*/
 body {
 	background-color: violet;
 }
+

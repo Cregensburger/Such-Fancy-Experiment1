@@ -25,10 +25,6 @@
 		border-radius: 50%;
 	}
 
-	.col-xs-2:nth-child(even){
-
-	}
-
 		/*Box 1 special styling, make it ease in and out orange*/
 		.col-xs-2:nth-child(1) {
 			background-color: red;
@@ -65,15 +61,112 @@
 
 		#indexBox2Back:hover{
 			background-color: purple;
-height: 10em;
+			height: 10em;
 			width: calc(100% - 82%);
 			/* .. at the same time flip the back side into visibility */
 			transform:rotateY(360deg);
 			-webkit-transform:rotateY(360deg);
 		}
 
+		/* Box 3 special styling, has little planets going around */
 		.col-xs-2:nth-child(3) {
 			background-color: yellow;
+		}
+
+		.container2 {
+			width: 300px;
+			height:300px;
+			margin: 0 auto;
+			position:relative;
+			overflow:hidden;
+		}
+
+		.planet {
+		    background: cornflowerblue;
+		    width: 10em;
+		    height: 10em;
+		    position:absolute;
+			top: 12.5%;
+			left: 12.5%;
+		    text-align: center;
+		    -webkit-transform: rotate(20deg);
+	    	-moz-transform: rotate(20deg);
+	        -ms-transform: rotate(20deg);
+	        -o-transform: rotate(20eg);
+		}
+
+		.planet:after {
+			content: "";
+			position:absolute;
+			top: 0;
+			left: 0;
+		    height: 10em;
+		    width: 10em;
+		    background: cornflowerblue;
+		    -webkit-transform: rotate(135deg);
+	    	-moz-transform: rotate(135deg);
+	        -ms-transform: rotate(135deg);
+	        -o-transform: rotate(135deg);
+		}
+
+		.planet:hover {
+			-webkit-animation: reverseorbit 1s linear infinite;
+			animation: reverseorbit 1s linear infinite;
+			transition:background-position 1s;
+		}
+
+		/* Define the keyframes of the animation */
+		/* Chrome still requires the -webkit- prefix */
+		@-webkit-keyframes reverseorbit {
+			from {
+				-webkit-transform:rotate(360deg);}
+			to {
+				-webkit-transform:rotate(0deg);
+			}
+		}
+		@keyframes reverseorbit {
+			from {
+				transform:rotate(360deg);
+				-webkit-transform:rotate(360deg);}
+			to {
+				transform:rotate(0deg);
+				-webkit-transform:rotate(0deg);
+			}
+		}
+
+		.star {
+			border-radius: 1em;
+			background-color: AliceBlue;
+			position: absolute;
+			top: 25%;
+			left: 25%;
+			width: 5em;
+			height: 5em;
+		}
+
+		.star:hover {
+			/* Chrome still requires the -webkit- prefix */
+			-webkit-animation:orbit .5s linear infinite;
+			animation:orbit .5s linear infinite;
+			transition:background-position .5s;
+		}
+
+		/* Define the keyframes of the animation */
+		@-webkit-keyframes orbit {
+			from {
+				-webkit-transform:rotate(0deg);}
+			to {
+				-webkit-transform:rotate(360deg);
+			}
+		}
+		@keyframes orbit {
+			from {
+				transform:rotate(0deg);
+				-webkit-transform:rotate(0deg);}
+			to {
+				transform:rotate(360deg);
+				-webkit-transform:rotate(360deg);
+			}
 		}
 
 		.col-xs-2:nth-child(4) {
